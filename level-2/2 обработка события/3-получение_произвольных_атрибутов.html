@@ -21,5 +21,16 @@
     3. При клике из event.target c помощью getAttribute() получите значение
     каждого атрибута и выведите в консоль.
     -->
+    <script>
+        'use strict';
+
+        let divModal = document.querySelector('div');
+
+        divModal.onclick = consoleReport;
+
+        function consoleReport(event) {
+                console.log('id - ' + this.getAttribute('id') + '\ntabindex - ' + this.getAttribute('tabindex') + '\naria-labelledby - ' + this.getAttribute('aria-labelledby') + '\naria-hidden - ' + this.getAttribute('aria-hidden'));  
+        };
+    </script>
 </body>
 </html>

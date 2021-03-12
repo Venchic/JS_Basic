@@ -18,5 +18,17 @@
     3. Переберите с помощью forEach event.target.classList и выведите каждый класс
     в консоль.
     -->
+    <script>
+        'use strict';
+
+        document.querySelector('p').onclick = pPrintConsole;
+
+        function pPrintConsole(event) {
+            console.log(this.classList);
+            //console.log(event.target.classList);
+            
+            this.classList.forEach(element => console.log('class - ' + element + '\n'));
+        }
+    </script>
 </body>
 </html>

@@ -24,25 +24,15 @@
     2. Проверьте есть ли у карточки класс hidden с помощью метода contains(),
     и если есть, то удалите с помощью метода remove(). -->
     <script>
-        let cards = document.querySelector('.card');
+        'use strict';
+        
+        let cards = document.querySelectorAll('.card');
 
         for (let index = 0; index < cards.length; index++) {
-            if (cards[index].classList.contains == 'hidden') {
-                
-            }
-            
-            cards[index].classList
-            
-            const element = array[index];
-            
-        }
-        
-        //.classList.contains('hidden').remove = 'hidden';
-        //cards
-        //cards.forEach(element => {
-            //if ()
-        //});
-        //.classList.contains('hidden').remove('hidden');
+            if (cards[index].classList.contains('hidden')) {
+                cards[index].classList.remove('hidden')
+            }        
+        };
     </script>
 </body>
 </html>
