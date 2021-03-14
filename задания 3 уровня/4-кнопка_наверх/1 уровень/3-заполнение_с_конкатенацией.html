@@ -8,6 +8,8 @@
 <body>
     
     <script>
+        'use strict';
+
         let totalString = "";
 
         /* Задание.
@@ -15,7 +17,10 @@
         так, чтобы итоговое значение в totalString получилось: слово1слово2слово3
         */
 
-
+        for (let index = 1; index <= 3; index++) {
+            totalString += 'слово' + [index];
+        }
+        
         // должно вывести:
         // слово1слово2слово3
         console.log(totalString);
