@@ -15,8 +15,8 @@ let text = document.querySelector('.text');
 
 let navLinks = document.querySelectorAll('a');
 
-navLinks.forEach(function() {
-    this. addEventListener('click', clickHandler);
+navLinks.forEach(function(navlink) {
+    navlink.addEventListener('click', clickHandler);
 });
 
 /**
@@ -26,8 +26,9 @@ navLinks.forEach(function() {
 function clickHandler(event) {
     // здесь вызывайте changeText и changeActiveClass, и передавайте
     // им объект события.
-    return console.log(event);
-   
+    //return console.log(event);
+    changeActiveClass(event);
+    changeText(event);
 }
 
 /**
@@ -36,7 +37,8 @@ function clickHandler(event) {
  * @param {MouseEvent} event 
  */
 function changeActiveClass(event) {
-    
+    document.querySelector('.active').classList.remove('active');
+    event.target.classList.add('active');
 }
 
 /**
@@ -46,5 +48,11 @@ function changeActiveClass(event) {
  * @param {MouseEvent} event 
  */
 function changeText(event) {
-    
+    if (event.target.textContent === 'Link 1') {
+        text.textContent = texts.text1;
+    } else if (event.target.textContent === 'Link 2') {
+        text.textContent = texts.text2;
+    } else if (event.target.textContent === 'Link 3') {
+        text.textContent = texts.text3;
+    }
 }
