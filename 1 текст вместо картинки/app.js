@@ -1,9 +1,11 @@
 'use strict';
 // 1. получите все кнопки и сохраните в переменную
-
+let buttons = document.querySelectorAll('button');
 // 1.1 затем проитерируйтесь по кнопкам и каждой из
 // них добавьте обработчик клика - функцию handleClick
-
+buttons.forEach(function (button) {
+    button.addEventListener('click', handleClick(event));
+})
 
 /**
  * Функция обрабатывает клик по кнопке в карточке товара и попеременно вызывает
@@ -14,7 +16,7 @@ function handleClick(clickedButtonEvent) {
     // 2. из объекта события получите ссылку на .product и
     // сохраните в переменную:
     // const cardNode = ;
-
+    const cardNode = clickedButtonEvent.target.pare;
     // 3. создайте литерал объекта со следующими свойствами:
     const card = {
         wrap: , // здесь элемент с классом .product
